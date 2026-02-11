@@ -1,0 +1,286 @@
+.contact-page {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8eaff 100%);
+  min-height: calc(100vh - 200px);
+  padding: clamp(2rem, 10vh, 5rem) clamp(1rem, 5vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-container {
+  background: white;
+  border-radius: clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(2.5rem, 8vh, 4rem);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1), 0 0 0 1px rgba(102, 126, 234, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  margin-bottom: clamp(3rem, 8vh, 4rem);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 8vh, 3.5rem);
+}
+
+.contact-header h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  margin-bottom: clamp(0.75rem, 1.5vh, 1.25rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.contact-header p {
+  color: #666;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.header-accent {
+  width: clamp(50px, 10vw, 100px);
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
+  border-radius: 2px;
+  margin: clamp(1rem, 2vh, 1.5rem) auto 0;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(2rem, 5vw, 2.5rem);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: clamp(1rem, 2vh, 1.25rem) clamp(1rem, 2vw, 1.25rem);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-family: inherit;
+  color: #333;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.form-input::placeholder {
+  color: transparent;
+}
+
+.form-input-wrapper label {
+  position: absolute;
+  top: clamp(0.5rem, 1.5vh, 0.75rem);
+  left: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  color: #667eea;
+  font-weight: 700;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left top;
+  background: white;
+  padding: 0 0.3rem;
+  z-index: 2;
+  display: block;
+}
+
+.form-input:focus,
+.form-input:not(:placeholder-shown) {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.08), inset 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.form-input:not(:placeholder-shown) ~ label,
+.form-input:focus ~ label {
+  top: -8px;
+  font-size: clamp(0.7rem, 1.4vw, 0.85rem);
+  color: #667eea;
+  font-weight: 700;
+}
+
+.form-input select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23667eea' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right clamp(1rem, 2vw, 1.25rem) center;
+  padding-right: clamp(2.5rem, 5vw, 3rem);
+  cursor: pointer;
+}
+
+.form-input select:focus {
+  outline: none;
+}
+
+.submit-btn {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: clamp(1rem, 2.5vh, 1.35rem) clamp(2rem, 5vw, 3rem);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: clamp(1.5rem, 3vh, 2rem);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+.submit-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.contact-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 4vw, 2rem);
+  max-width: 1200px;
+}
+
+.benefits-card {
+  background: white;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+  border-radius: 16px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefits-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+  transform: translateY(-6px);
+}
+
+.benefits-card:hover::before {
+  transform: scaleX(1);
+}
+
+.benefit-icon {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  margin-bottom: clamp(0.75rem, 1.5vh, 1rem);
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.benefits-card:nth-child(2) .benefit-icon {
+  animation-delay: 0.3s;
+}
+
+.benefits-card:nth-child(3) .benefit-icon {
+  animation-delay: 0.6s;
+}
+
+.benefits-card:nth-child(4) .benefit-icon {
+  animation-delay: 0.9s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.benefits-card h4 {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: #333;
+  margin: clamp(0.5rem, 1vh, 0.75rem) 0;
+  font-weight: 700;
+}
+
+.benefits-card p {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem;
+  }
+}

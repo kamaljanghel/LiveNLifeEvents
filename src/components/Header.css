@@ -1,0 +1,89 @@
+.site-header {
+  background: linear-gradient(
+    135deg,
+    rgba(131, 58, 180, 0.9),
+    rgba(253, 29, 29, 0.8),
+    rgba(252, 176, 69, 0.9)
+  );
+  backdrop-filter: blur(8px);
+  padding: clamp(0.75rem, 2vh, 1rem) clamp(1rem, 5vw, 1.5rem);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.site-header .container {
+  max-width: 1000px;   /* smaller width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-weight: 800;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* Hover underline animation */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #00ffd5;
+  transition: width 0.25s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: clamp(0.4rem, 1vh, 0.6rem);
+  }
+
+  .nav-menu {
+    position: static;
+    transform: none;
+    gap: clamp(0.8rem, 1.5vw, 1rem);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+}
