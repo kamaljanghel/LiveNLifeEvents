@@ -270,17 +270,169 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: clamp(1.5rem, 5vh, 3rem) clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .contact-container {
+    padding: clamp(1.75rem, 5vh, 2.5rem);
+    margin-bottom: clamp(2rem, 6vh, 3rem);
+  }
+  
+  .contact-header h1 {
+    font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+    margin-bottom: clamp(0.6rem, 1.2vh, 1rem);
+  }
+  
+  .contact-header p {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+  
+  .header-accent {
+    margin: clamp(0.8rem, 1.5vh, 1.2rem) auto 0;
+  }
+  
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: clamp(1.5rem, 4vh, 2rem);
+  }
+  
+  .form-input {
+    padding: clamp(0.95rem, 2vh, 1.15rem) clamp(0.95rem, 2vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    min-height: 44px;
+  }
+  
+  .form-input-wrapper label {
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  }
+  
+  .submit-btn {
+    padding: clamp(0.95rem, 2.2vh, 1.2rem) clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    min-height: 44px;
+  }
+  
+  .benefits-card {
+    padding: clamp(1.3rem, 3.5vw, 2rem);
+  }
+  
+  .benefit-icon {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+  
+  .benefits-card h4 {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  }
+  
+  .benefits-card p {
+    font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  }
+}
+
 @media (max-width: 480px) {
   .contact-page {
-    padding: 1.5rem 1rem;
+    padding: clamp(1.25rem, 4.5vh, 2rem) 1rem;
+    min-height: auto;
+  }
+
+  .contact-wrapper {
+    max-width: 100%;
   }
 
   .contact-container {
-    padding: 1.5rem;
+    padding: 1.5rem 1.2rem;
+    margin-bottom: clamp(1.75rem, 5vh, 2.5rem);
+    border-radius: clamp(1.2rem, 2.5vw, 1.5rem);
+  }
+  
+  .contact-header {
+    margin-bottom: clamp(1.8rem, 5vh, 2.5rem);
+  }
+  
+  .contact-header h1 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-header p {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+  
+  .header-accent {
+    width: clamp(40px, 8vw, 70px);
+    margin: 0.8rem auto 0;
   }
 
-  .form-group input,
-  .form-group select {
-    padding: 0.75rem;
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+
+  .form-input {
+    padding: 0.9rem 1rem;
+    font-size: clamp(0.88rem, 1.6vw, 1rem);
+    min-height: 44px;
+    border-radius: 10px;
+  }
+  
+  .form-input-wrapper label {
+    font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+    top: clamp(0.45rem, 1.2vh, 0.65rem);
+    left: clamp(0.9rem, 1.8vw, 1.1rem);
+  }
+  
+  .form-input:not(:placeholder-shown) ~ label,
+  .form-input:focus ~ label {
+    top: -7px;
+    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+  }
+  
+  .form-input select {
+    background-position: right 0.9rem center;
+    padding-right: clamp(2.3rem, 4vw, 2.8rem);
+  }
+
+  .submit-btn {
+    padding: 0.9rem clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    min-height: 44px;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  
+  .submit-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-benefits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .benefits-card {
+    padding: clamp(1.2rem, 3vw, 1.6rem);
+    border-radius: 14px;
+  }
+  
+  .benefit-icon {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    margin-bottom: 0.6rem;
+  }
+  
+  .benefits-card h4 {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    margin: clamp(0.4rem, 0.8vh, 0.6rem) 0;
+  }
+  
+  .benefits-card p {
+    font-size: clamp(0.78rem, 1.4vw, 0.88rem);
+    line-height: 1.5;
   }
 }

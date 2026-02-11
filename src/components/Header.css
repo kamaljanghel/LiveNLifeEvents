@@ -70,20 +70,56 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .site-header {
+    padding: clamp(0.6rem, 1.5vh, 0.8rem) clamp(0.75rem, 3vw, 1rem);
+  }
+  
   .site-header .container {
     flex-direction: column;
-    gap: clamp(0.4rem, 1vh, 0.6rem);
+    gap: clamp(0.6rem, 1.5vh, 0.9rem);
   }
 
   .nav-menu {
     position: static;
     transform: none;
-    gap: clamp(0.8rem, 1.5vw, 1rem);
+    gap: clamp(0.7rem, 2vw, 1rem);
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .logo {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  }
+  
+  .nav-menu a {
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 0.5rem clamp(0.5rem, 2vw, 0.75rem);
+  }
+  
+  .site-header .container {
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+  }
+  
+  .nav-menu {
+    gap: 0.5rem;
+  }
+  
+  .nav-menu a {
+    font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+    padding: 0.4rem 0.6rem;
+    min-height: 40px;
   }
 }

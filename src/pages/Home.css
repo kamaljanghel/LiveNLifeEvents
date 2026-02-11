@@ -455,8 +455,244 @@ body {
 }
 
 @media (max-width: 768px) {
+  .home-header {
+    padding: clamp(1.5rem, 6vh, 3rem) clamp(1rem, 4vw, 1.5rem) clamp(1rem, 5vh, 2rem);
+  }
+  
+  .home-header h1 {
+    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+  }
+  
+  .subtitle {
+    font-size: clamp(0.95rem, 2.3vw, 1.1rem);
+  }
+  
+  .hero-content h2 {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+  }
+  
+  .hero-content p {
+    font-size: clamp(0.9rem, 1.9vw, 1.05rem);
+  }
+  
+  .cta-button {
+    padding: clamp(0.7rem, 1.5vh, 0.9rem) clamp(1.3rem, 3.5vw, 2rem);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    min-height: 44px;
+  }
+  
   .features-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+  
+  .feature-card {
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
+  }
+  
+  .feature-card img {
+    height: clamp(150px, 35vw, 200px);
+  }
+  
+  .slider-track {
+    padding: clamp(0.5rem, 1.5vh, 0.75rem);
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  
+  .slider-track img {
+    width: clamp(200px, 40vw, 300px);
+    height: clamp(120px, 25vw, 180px);
+  }
+  
+  .tabs-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tab-btn {
+    padding: clamp(0.8rem, 2vh, 1rem);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  }
+  
+  .tabs-content {
+    padding: clamp(1.5rem, 5vh, 2rem);
+  }
+  
+  .tab-pane h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  }
+  
+  .tab-pane p {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+  
+  .why-choose-section {
+    padding: clamp(2rem, 8vh, 3.5rem) clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  .why-choose-section h2 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    margin-bottom: clamp(1.5rem, 5vh, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    overflow-x: hidden;
+  }
+  
+  .home-header {
+    padding: clamp(1.2rem, 4.5vh, 2rem) 1rem clamp(0.8rem, 3.5vh, 1.5rem);
+  }
+  
+  .home-header h1 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-top: 0.5rem;
+  }
+  
+  .hero {
+    padding: clamp(1.5rem, 6vh, 2.5rem) 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+    margin-bottom: clamp(0.8rem, 2vh, 1.2rem);
+  }
+  
+  .hero-content p {
+    font-size: clamp(0.88rem, 1.7vw, 1rem);
+    margin-bottom: clamp(1.2rem, 3.5vh, 1.8rem);
+  }
+  
+  .cta-button {
+    padding: clamp(0.65rem, 1.3vh, 0.8rem) clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(0.88rem, 1.6vw, 0.98rem);
+    min-height: 40px;
+  }
+  
+  .features {
+    padding: clamp(1.5rem, 6vh, 2.5rem) 1rem;
+  }
+  
+  .features h2 {
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    margin-bottom: 1rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  }
+  
+  .feature-card img {
+    height: clamp(120px, 30vw, 150px);
+    margin-bottom: 0.75rem;
+  }
+  
+  .slider-container {
+    padding: clamp(1.25rem, 4.5vh, 2rem) 1rem;
+  }
+  
+  .slider-container h2 {
+    font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+    margin-bottom: clamp(0.8rem, 2vh, 1.2rem);
+  }
+  
+  .slider-track {
+    padding: clamp(0.4rem, 1vh, 0.6rem);
+    gap: clamp(0.75rem, 2vw, 1rem);
+  }
+  
+  .slider-track img {
+    width: clamp(180px, 38vw, 240px);
+    height: clamp(108px, 23vw, 145px);
+  }
+  
+  .mission-section {
+    padding: clamp(1.5rem, 6vh, 2.5rem) 1rem;
+  }
+  
+  .mission-header h2 {
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    margin-bottom: clamp(1.2rem, 4vh, 1.8rem);
+  }
+  
+  .tabs-container {
+    border-radius: clamp(1rem, 2vw, 1.25rem);
+  }
+  
+  .tabs-nav {
+    grid-template-columns: 1fr;
+  }
+  
+  .tab-btn {
+    padding: clamp(0.75rem, 1.8vh, 0.9rem);
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    min-height: 44px;
+    border-bottom: none !important;
+    border-right: 3px solid transparent !important;
+  }
+  
+  .tab-btn.active {
+    border-right: 3px solid #00ffd5 !important;
+  }
+  
+  .tabs-content {
+    padding: clamp(1.25rem, 4vh, 1.8rem);
+  }
+  
+  .tab-pane h3 {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    margin-bottom: clamp(0.75rem, 1.5vh, 1rem);
+  }
+  
+  .tab-pane p {
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+    margin-bottom: clamp(1rem, 2.5vh, 1.5rem);
+  }
+  
+  .why-choose-section {
+    padding: clamp(1.5rem, 6vh, 2.5rem) 1rem;
+  }
+  
+  .why-choose-section h2 {
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    margin-bottom: clamp(1.25rem, 4vh, 1.8rem);
+  }
+  
+  .why-choose-section .features-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(0.9rem, 2.5vw, 1.25rem);
+  }
+  
+  .feature-box {
+    padding: clamp(1.1rem, 3vw, 1.5rem);
+    min-height: 120px;
+  }
+  
+  .feature-box span {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  
+  .feature-box p {
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   }
 }
 
