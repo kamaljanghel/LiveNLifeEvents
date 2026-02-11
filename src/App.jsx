@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -62,13 +63,13 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <main>
         {renderPage()}
       </main>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 

@@ -1,8 +1,13 @@
 import './Home.css'
 import { useState } from 'react'
 import event1 from '../assets/events/event1.jpg'
-import event2 from '../assets/events/event2.png'
-import ownerImg from '../assets/events/event1.jpg'
+import event2 from '../assets/events/event6.webp'
+import event3 from '../assets/events/event3.jpg'
+import event4 from '../assets/events/event4.jpg'
+import event5 from '../assets/events/event5.webp'
+import event6 from '../assets/events/event2.png'
+import event7 from '../assets/events/event7.webp'
+import ownerImg from '../assets/events/event8.jpg'
 
 function Home() {
   const [showForm, setShowForm] = useState(false)
@@ -45,18 +50,18 @@ function Home() {
         <div className="slider-track">
           <img src={event1} alt="event" />
           <img src={event2} alt="event" />
-          <img src={event1} alt="event" />
-          <img src={event2} alt="event" />
-          <img src={event1} alt="event" />
-          <img src={event2} alt="event" />
+          <img src={event3} alt="event" />
+          <img src={event4} alt="event" />
+          <img src={event5} alt="event" />
+          <img src={event6} alt="event" />
 
           {/* Duplicate for smooth infinite scroll */}
+          <img src={event7} alt="event" />
           <img src={event1} alt="event" />
           <img src={event2} alt="event" />
-          <img src={event1} alt="event" />
-          <img src={event2} alt="event" />
-          <img src={event1} alt="event" />
-          <img src={event2} alt="event" />
+          <img src={event3} alt="event" />
+          <img src={event4} alt="event" />
+          <img src={event5} alt="event" />
         </div>
       </section>
 
@@ -90,7 +95,7 @@ function Home() {
           </div>
           <div className="feature-card">
             <div className="card-image">
-              <img src={event1} alt="Baby Showers" />
+              <img src={event3} alt="Baby Showers" />
               <div className="card-overlay">👶</div>
             </div>
             <h3>Baby Showers</h3>
@@ -98,7 +103,7 @@ function Home() {
           </div>
           <div className="feature-card">
             <div className="card-image">
-              <img src={event2} alt="Couple Date" />
+              <img src={event4} alt="Couple Date" />
               <div className="card-overlay">💑</div>
             </div>
             <h3>Couple Date</h3>
@@ -106,7 +111,7 @@ function Home() {
           </div>
           <div className="feature-card">
             <div className="card-image">
-              <img src={event1} alt="Special Day" />
+              <img src={event5} alt="Special Day" />
               <div className="card-overlay">✨</div>
             </div>
             <h3>Special Day</h3>
@@ -114,7 +119,7 @@ function Home() {
           </div>
           <div className="feature-card">
             <div className="card-image">
-              <img src={event2} alt="Wedding Day" />
+              <img src={event7} alt="Wedding Day" />
               <div className="card-overlay">💍</div>
             </div>
             <h3>Wedding Day</h3>

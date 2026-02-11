@@ -2,12 +2,14 @@ import { useState } from 'react'
 import './Contact.css'
 
 function Contact() {
-  const [formData, setFormData] = useState({
+  const initialState = {
     name: '',
     phone: '',
     planType: 'Basic',
     date: ''
-  })
+  }
+
+  const [formData, setFormData] = useState(initialState)
   const owner = 'Sanat'
 
   const handleChange = (e) => {
@@ -20,30 +22,37 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    
+
     if (!formData.name || !formData.phone || !formData.date) {
       alert('Please fill in all fields')
       return
     }
 
-    const message = `CONTACT FORM SUBMISSION\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEvent Plan Type: ${formData.planType}\nEvent Date: ${formData.date}\n\nSubmitted to: ${owner}`
-    
+    const message = `CONTACT FORM SUBMISSION
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Event Plan Type: ${formData.planType}
+Event Date: ${formData.date}
+
+Submitted to: ${owner}`
+
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard
         .writeText(message)
         .then(() => {
           alert(`Thank you ${formData.name}! Your request has been sent to ${owner}. Message copied to clipboard.`)
-          setFormData({ name: '', phone: '', planType: 'Basic', date: '' })
+          setFormData(initialState)
         })
         .catch(() => {
           console.log(message)
           alert(`Thank you ${formData.name}! Your request has been logged. Details sent to ${owner}.`)
-          setFormData({ name: '', phone: '', planType: 'Basic', date: '' })
+          setFormData(initialState)
         })
     } else {
       console.log(message)
       alert(`Thank you ${formData.name}! Your request has been logged. Details sent to ${owner}.`)
-      setFormData({ name: '', phone: '', planType: 'Basic', date: '' })
+      setFormData(initialState)
     }
   }
 
@@ -83,7 +92,7 @@ function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder=" "
-                  pattern="[0-9\-\+\s\(\)]+"
+                  pattern="[0-9\-+\s()]+"
                   required
                   className="form-input"
                 />
@@ -140,16 +149,19 @@ function Contact() {
             <h4>Quick Response</h4>
             <p>Get in touch within 24 hours</p>
           </div>
+
           <div className="benefits-card">
             <div className="benefit-icon">🎯</div>
             <h4>Expert Planning</h4>
             <p>Professional event management</p>
           </div>
+
           <div className="benefits-card">
             <div className="benefit-icon">💰</div>
             <h4>Affordable</h4>
-            <p>Pricing that fits your budget</p>\
+            <p>Pricing that fits your budget</p>
           </div>
+
           <div className="benefits-card">
             <div className="benefit-icon">🕐</div>
             <h4>24/7 Support</h4>

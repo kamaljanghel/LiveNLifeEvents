@@ -1,6 +1,8 @@
 import './Header.css'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Header() {
+  const { isDark, toggleTheme } = useTheme()
   return (
     <header className="site-header">
       <div className="container">
@@ -17,6 +19,16 @@ export default function Header() {
           <a href="#mission">Our Mission</a>
           <a href="/contact">Contact Us</a>
         </nav>
+
+        {/* Dark Mode Toggle */}
+        <button 
+          className="theme-toggle" 
+          onClick={toggleTheme}
+          aria-label="Toggle dark mode"
+          title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {isDark ? '☀️' : '🌙'}
+        </button>
 
       </div>
     </header>

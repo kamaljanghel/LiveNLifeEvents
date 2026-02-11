@@ -4,9 +4,37 @@
   box-sizing: border-box;
 }
 
+/* CSS Variables for Theme */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --header-gradient: linear-gradient(135deg, rgba(131, 58, 180, 0.9), rgba(253, 29, 29, 0.8), rgba(252, 176, 69, 0.9));
+}
+
+:root.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --card-bg: #262626;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --header-gradient: linear-gradient(135deg, rgba(80, 30, 120, 0.95), rgba(180, 20, 20, 0.9), rgba(180, 120, 40, 0.95));
+}
+
+html, body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 #root {

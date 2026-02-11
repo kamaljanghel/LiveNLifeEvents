@@ -18,11 +18,13 @@
 .footer-brand h3 {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   margin-bottom: clamp(0.5rem, 1vh, 0.8rem);
+  color: #ffffff;
 }
 
 .footer-brand p {
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  color: #e0e0e0;
 }
 
 /* Links */
@@ -30,15 +32,16 @@
 .footer-contact h4 {
   margin-bottom: clamp(0.5rem, 1vh, 1rem);
   font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: #ffffff;
 }
 
 .footer-links a {
   display: block;
   text-decoration: none;
-  color: #ddd;
+  color: #d0d0d0;
   margin-bottom: clamp(0.4rem, 0.8vh, 0.6rem);
   font-size: clamp(0.8rem, 1.8vw, 0.95rem);
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -48,8 +51,9 @@
 /* Contact */
 .footer-contact p {
   margin: clamp(0.2rem, 0.5vh, 0.4rem) 0;
-  opacity: 0.85;
+  opacity: 0.9;
   font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  color: #e0e0e0;
 }
 
 /* Bottom Bar */
@@ -57,8 +61,9 @@
   text-align: center;
   padding: clamp(1rem, 2vh, 1.25rem);
   font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
+  color: #d0d0d0;
 }
 
 /* Mobile */
